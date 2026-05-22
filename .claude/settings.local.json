@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:feature-sliced.design)",
+      "WebFetch(domain:hackernoon.com)",
+      "WebFetch(domain:zenn.dev)",
+      "Bash(pnpm install *)",
+      "Bash(pnpm run *)",
+      "Bash(pnpm --filter @praha-agile/student lint:fix)",
+      "Bash(pnpm --filter @praha-agile/admin lint:fix)"
+    ]
+  }
+}
