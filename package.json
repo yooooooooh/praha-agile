@@ -1,0 +1,27 @@
+{
+  "name": "praha-agile",
+  "version": "0.0.0",
+  "private": true,
+  "engines": {
+    "node": "22.22.2",
+    "pnpm": ">=9.15.0 <10"
+  },
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "lint:fix": "turbo run lint:fix",
+    "format": "turbo run format",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "dev": "turbo run dev",
+    "db:generate": "pnpm --filter @praha-agile/db db:generate",
+    "db:migrate": "pnpm --filter @praha-agile/db db:migrate",
+    "db:studio": "pnpm --filter @praha-agile/db db:studio"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "catalog:",
+    "turbo": "^2.5.0",
+    "typescript": "catalog:"
+  }
+}
