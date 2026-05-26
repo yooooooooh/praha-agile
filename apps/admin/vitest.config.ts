@@ -9,6 +9,6 @@ export default defineConfig({
     globals: false,
     include: ["**/*.test.{ts,tsx}"],
     exclude: ["**/node_modules/**", "**/.next/**", "**/dist/**"],
-    passWithNoTests: true, // テストを書いたら false にする
+    passWithNoTests: true, // TODO: テストを書いたら false にする
   },
 })
