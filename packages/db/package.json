@@ -15,20 +15,18 @@
     "test": "vitest run",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
-    "db:push": "drizzle-kit push",
     "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
-    "drizzle-orm": "^0.45.2",
-    "server-only": "^0.0.1"
+    "drizzle-orm": "catalog:",
+    "server-only": "catalog:"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.4.15",
-    "@praha-agile/biome-config": "workspace:*",
+    "@biomejs/biome": "catalog:",
     "@praha-agile/typescript-config": "workspace:*",
-    "@types/node": "^22.19.19",
-    "drizzle-kit": "^0.31.10",
-    "typescript": "^5",
-    "vitest": "^4.1.7"
+    "@types/node": "catalog:",
+    "drizzle-kit": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
   }
 }

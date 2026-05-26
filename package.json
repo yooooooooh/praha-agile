@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "engines": {
-    "node": ">=22.0.0",
-    "pnpm": ">=9.0.0"
+    "node": "22.22.2",
+    "pnpm": "9.15.0"
   },
   "packageManager": "pnpm@9.15.0",
   "scripts": {
@@ -17,12 +17,11 @@
     "dev": "turbo run dev",
     "db:generate": "pnpm --filter @praha-agile/db db:generate",
     "db:migrate": "pnpm --filter @praha-agile/db db:migrate",
-    "db:push": "pnpm --filter @praha-agile/db db:push",
     "db:studio": "pnpm --filter @praha-agile/db db:studio"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.4.15",
+    "@biomejs/biome": "catalog:",
     "turbo": "^2.5.0",
-    "typescript": "^5"
+    "typescript": "catalog:"
   }
 }

@@ -4,18 +4,63 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+catalogs:
+  default:
+    '@biomejs/biome':
+      specifier: ~2.4.15
+      version: 2.4.15
+    '@tailwindcss/postcss':
+      specifier: ~4.3.0
+      version: 4.3.0
+    '@types/node':
+      specifier: ~22.19.19
+      version: 22.19.19
+    '@types/react':
+      specifier: ~19.2.0
+      version: 19.2.15
+    '@types/react-dom':
+      specifier: ~19.2.0
+      version: 19.2.3
+    drizzle-kit:
+      specifier: ~0.31.10
+      version: 0.31.10
+    drizzle-orm:
+      specifier: ~0.45.2
+      version: 0.45.2
+    next:
+      specifier: 16.2.6
+      version: 16.2.6
+    react:
+      specifier: 19.2.4
+      version: 19.2.4
+    react-dom:
+      specifier: 19.2.4
+      version: 19.2.4
+    server-only:
+      specifier: 0.0.1
+      version: 0.0.1
+    tailwindcss:
+      specifier: ~4.3.0
+      version: 4.3.0
+    typescript:
+      specifier: ~5.9.3
+      version: 5.9.3
+    vitest:
+      specifier: ~4.1.7
+      version: 4.1.7
+
 importers:
 
   .:
     devDependencies:
       '@biomejs/biome':
-        specifier: ^2.4.15
+        specifier: 'catalog:'
         version: 2.4.15
       turbo:
         specifier: ^2.5.0
         version: 2.9.14
       typescript:
-        specifier: ^5
+        specifier: 'catalog:'
         version: 5.9.3
 
   apps/admin:
@@ -24,47 +69,44 @@ importers:
         specifier: workspace:*
         version: link:../../packages/db
       next:
-        specifier: 16.2.6
+        specifier: 'catalog:'
         version: 16.2.6(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       react:
-        specifier: 19.2.4
+        specifier: 'catalog:'
         version: 19.2.4
       react-dom:
-        specifier: 19.2.4
+        specifier: 'catalog:'
         version: 19.2.4(react@19.2.4)
       server-only:
-        specifier: ^0.0.1
+        specifier: 'catalog:'
         version: 0.0.1
     devDependencies:
       '@biomejs/biome':
-        specifier: ^2.4.15
+        specifier: 'catalog:'
         version: 2.4.15
-      '@praha-agile/biome-config':
-        specifier: workspace:*
-        version: link:../../packages/biome-config
       '@praha-agile/typescript-config':
         specifier: workspace:*
         version: link:../../packages/typescript-config
       '@tailwindcss/postcss':
-        specifier: ^4
+        specifier: 'catalog:'
         version: 4.3.0
       '@types/node':
-        specifier: ^22.19.19
+        specifier: 'catalog:'
         version: 22.19.19
       '@types/react':
-        specifier: ^19
+        specifier: 'catalog:'
         version: 19.2.15
       '@types/react-dom':
-        specifier: ^19
+        specifier: 'catalog:'
         version: 19.2.3(@types/react@19.2.15)
       tailwindcss:
-        specifier: ^4
+        specifier: 'catalog:'
         version: 4.3.0
       typescript:
-        specifier: ^5
+        specifier: 'catalog:'
         version: 5.9.3
       vitest:
-        specifier: ^4.1.7
+        specifier: 'catalog:'
         version: 4.1.7(@types/node@22.19.19)(vite@8.0.14(@types/node@22.19.19)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3))
 
   apps/student:
@@ -73,80 +115,72 @@ importers:
         specifier: workspace:*
         version: link:../../packages/db
       next:
-        specifier: 16.2.6
+        specifier: 'catalog:'
         version: 16.2.6(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       react:
-        specifier: 19.2.4
+        specifier: 'catalog:'
         version: 19.2.4
       react-dom:
-        specifier: 19.2.4
+        specifier: 'catalog:'
         version: 19.2.4(react@19.2.4)
       server-only:
-        specifier: ^0.0.1
+        specifier: 'catalog:'
         version: 0.0.1
     devDependencies:
       '@biomejs/biome':
-        specifier: ^2.4.15
+        specifier: 'catalog:'
         version: 2.4.15
-      '@praha-agile/biome-config':
-        specifier: workspace:*
-        version: link:../../packages/biome-config
       '@praha-agile/typescript-config':
         specifier: workspace:*
         version: link:../../packages/typescript-config
       '@tailwindcss/postcss':
-        specifier: ^4
+        specifier: 'catalog:'
         version: 4.3.0
       '@types/node':
-        specifier: ^22.19.19
+        specifier: 'catalog:'
         version: 22.19.19
       '@types/react':
-        specifier: ^19
+        specifier: 'catalog:'
         version: 19.2.15
       '@types/react-dom':
-        specifier: ^19
+        specifier: 'catalog:'
         version: 19.2.3(@types/react@19.2.15)
       tailwindcss:
-        specifier: ^4
+        specifier: 'catalog:'
         version: 4.3.0
       typescript:
-        specifier: ^5
+        specifier: 'catalog:'
         version: 5.9.3
       vitest:
-        specifier: ^4.1.7
+        specifier: 'catalog:'
         version: 4.1.7(@types/node@22.19.19)(vite@8.0.14(@types/node@22.19.19)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3))
-
-  packages/biome-config: {}
 
   packages/db:
     dependencies:
       drizzle-orm:
-        specifier: ^0.45.2
+        specifier: 'catalog:'
         version: 0.45.2
       server-only:
-        specifier: ^0.0.1
+        specifier: 'catalog:'
         version: 0.0.1
     devDependencies:
       '@biomejs/biome':
-        specifier: ^2.4.15
+        specifier: 'catalog:'
         version: 2.4.15
-      '@praha-agile/biome-config':
-        specifier: workspace:*
-        version: link:../biome-config
       '@praha-agile/typescript-config':
         specifier: workspace:*
         version: link:../typescript-config
       '@types/node':
-        specifier: ^22.19.19
+        specifier: 'catalog:'
         version: 22.19.19
       drizzle-kit:
-        specifier: ^0.31.10
+        specifier: 'catalog:'
         version: 0.31.10
       typescript:
-        specifier: ^5
+        specifier: 'catalog:'
         version: 5.9.3
       vitest:
-        specifier: ^4.1.7
+        specifier: 'catalog:'
         version: 4.1.7(@types/node@22.19.19)(vite@8.0.14(@types/node@22.19.19)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3))
 
   packages/typescript-config: {}

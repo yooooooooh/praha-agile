@@ -1,16 +1,7 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.4.15/schema.json",
-  "extends": ["@praha-agile/biome-config"],
+  "extends": "//",
   "files": {
-    "ignoreUnknown": true,
-    "includes": [
-      "**",
-      "!**/node_modules",
-      "!**/.next",
-      "!**/.turbo",
-      "!**/coverage",
-      "!**/.vercel",
-      "!next-env.d.ts"
-    ]
+    "includes": ["**", "!next-env.d.ts"]
   }
 }

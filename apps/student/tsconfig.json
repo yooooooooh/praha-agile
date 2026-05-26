@@ -1,6 +1,10 @@
 {
-  "extends": "@praha-agile/typescript-config/nextjs.json",
+  "extends": "@praha-agile/typescript-config/base.json",
   "compilerOptions": {
+    "lib": ["DOM", "DOM.Iterable", "ES2022"],
+    "jsx": "preserve",
+    "allowJs": true,
+    "plugins": [{ "name": "next" }],
     "paths": {
       "@/*": ["./*"]
     }

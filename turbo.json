@@ -4,24 +4,18 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": [".next/**", "!.next/cache/**", "dist/**"],
-      "env": ["NODE_ENV", "DATABASE_URL"]
+      "outputs": [".next/**", "!.next/cache/**"],
+      "env": ["NODE_ENV"]
     },
-    "lint": {
-      "dependsOn": ["^build"]
-    },
+    "lint": {},
     "lint:fix": {
       "cache": false
     },
     "format": {
       "cache": false
     },
-    "typecheck": {
-      "dependsOn": ["^build"]
-    },
-    "test": {
-      "dependsOn": ["^build"]
-    },
+    "typecheck": {},
+    "test": {},
     "dev": {
       "cache": false,
       "persistent": true
