@@ -13,5 +13,6 @@ This version has breaking changes — APIs, conventions, and file structure may 
   - 認証が実装される時は `data/auth.ts` の `verifySession()` を各 data 関数の冒頭で呼ぶ前提
   - Next.js 16 公式は「layout は navigation で再レンダリングされず session が検証されないので、layout で auth check しない」と明記 (DAL-only)
 - `react` の `cache()` で wrap する場合、引数はプリミティブのみ (オブジェクトリテラルは参照比較で memo が効かない)
+- Route Groups (例: `(authed)`) は URL を変えずに layout を整理する用途のみ。auth boundary としては使わない (Next.js 16 公式 `01-app/03-api-reference/03-file-conventions/route-groups.md` の use cases に auth boundary は含まれず、`01-app/02-guides/authentication.md` も layout での auth check を非推奨)。認可は `data/` の `verifySession()` で担保する
 
 `data/` を超えるレイヤー (`model/`, `app/<route>/actions.ts` の薄さ、DTO 変換、ドメイン不変条件の置き場、認証ライブラリ選定、最初の schema) は Next.jsでは明確に指示はされていない。
